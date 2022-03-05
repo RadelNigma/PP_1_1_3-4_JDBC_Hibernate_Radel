@@ -18,8 +18,10 @@ public class Util {
     static {
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            System.out.println("Успешное подключение к базе данных " + URL + "!");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Ошибка подключения к базе данных " + URL + "!");
+            System.out.println(e);
         }
     }
 }
